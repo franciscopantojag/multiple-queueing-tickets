@@ -1,7 +1,7 @@
 import { By } from 'selenium-webdriver';
 import { startDriver } from '../adapters/webScrapper';
 import {
-  defaultBuyButtonXPath,
+  defaultBuyButtonCSS,
   defaultEventURL,
   defaultNumberOfQueues,
   defaultQueueURL,
@@ -11,25 +11,25 @@ import {
 
 interface EnterQueueOptions {
   eventURL: string;
-  buyButtonXPath: string;
+  buyButtonCSS: string;
   queueURL?: string;
   useQueueURL?: boolean;
 }
 
-const enterQueue = async ({ eventURL, buyButtonXPath, queueURL, useQueueURL }: EnterQueueOptions) => {
+const enterQueue = async ({ eventURL, buyButtonCSS, queueURL, useQueueURL }: EnterQueueOptions) => {
   const driver = await startDriver();
   if (queueURL && useQueueURL) {
     await driver.get(queueURL);
     return driver.navigate().refresh();
   }
   await driver.get(eventURL);
-  const button = await driver.findElement(By.xpath(buyButtonXPath));
+  const button = await driver.findElement(By.css(buyButtonCSS));
   return button.click();
 };
 
 interface MultipleQueueingOptions {
   eventURL?: string;
-  buyButtonXPath?: string;
+  buyButtonCSS?: string;
   numberOfQueues?: number;
   queueURL?: string;
   useQueueURL?: boolean;
@@ -39,7 +39,7 @@ export const multipleQueueing = (options: MultipleQueueingOptions = defaultMulti
   const {
     numberOfQueues = defaultNumberOfQueues,
     eventURL = defaultEventURL,
-    buyButtonXPath = defaultBuyButtonXPath,
+    buyButtonCSS = defaultBuyButtonCSS,
     queueURL = defaultQueueURL,
     useQueueURL = defaultUseQueueURL,
   } = options;
@@ -48,6 +48,6 @@ export const multipleQueueing = (options: MultipleQueueingOptions = defaultMulti
 
   range.forEach((n) => {
     console.log(`Opening browser ${n + 1}`);
-    enterQueue({ eventURL, buyButtonXPath, queueURL, useQueueURL });
+    enterQueue({ eventURL, buyButtonCSS, queueURL, useQueueURL });
   });
 };

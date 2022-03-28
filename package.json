@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "chromedriver": "^99.0.0",
-    "css2xpath": "^0.0.3",
     "prompt-sync": "^4.2.0",
     "selenium-webdriver": "^4.1.1"
   }
