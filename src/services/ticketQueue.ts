@@ -27,12 +27,8 @@ const enterQueue = async ({ eventURL, buyButtonCSS, queueURL, useQueueURL }: Ent
   return button.click();
 };
 
-interface MultipleQueueingOptions {
-  eventURL?: string;
-  buyButtonCSS?: string;
+interface MultipleQueueingOptions extends Partial<EnterQueueOptions> {
   numberOfQueues?: number;
-  queueURL?: string;
-  useQueueURL?: boolean;
 }
 
 export const multipleQueueing = (options: MultipleQueueingOptions = defaultMultipleQueueingOptions) => {
