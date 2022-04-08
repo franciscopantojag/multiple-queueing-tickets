@@ -1,13 +1,13 @@
-export const defaultNumberOfQueues = 100;
-export const defaultEventURL = 'https://teleticket.com.pe/daddy-yankee-enlima2022';
-export const defaultBuyButtonCSS = "[id='choose-tickets-section text-center'] > a";
-export const defaultQueueURL = 'https://queue.teleticket.com.pe/?c=puntoticket&e=ics014b&cid=es-CL&t_cal=1&t_ct=3';
-export const defaultUseQueueURL = false;
+export const NUMBER_OF_QUEUES = 100;
+export const EVENT_URL = 'https://teleticket.com.pe/daddy-yankee-enlima2022';
+export const BUY_BUTTON_CSS = "[id='choose-tickets-section text-center'] > a";
+export const QUEUE_URL = 'https://queue.teleticket.com.pe/?c=puntoticket&e=ics014b&cid=es-CL&t_cal=1&t_ct=3';
+export const USE_QUEUE_URL = false;
 
-export const defaultMultipleQueueingOptions = {
-  numberOfQueues: defaultNumberOfQueues,
-  eventURL: defaultEventURL,
-  buyButtonCSS: defaultBuyButtonCSS,
-  queueURL: defaultQueueURL,
-  useQueueURL: defaultUseQueueURL,
+export const QUEUEING_OPTIONS = {
+  numberOfQueues: NUMBER_OF_QUEUES,
+  eventURL: EVENT_URL,
+  buyButtonCSS: BUY_BUTTON_CSS,
+  queueURL: QUEUE_URL,
+  useQueueURL: USE_QUEUE_URL,
 };

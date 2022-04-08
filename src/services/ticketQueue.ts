@@ -1,13 +1,6 @@
 import { By } from 'selenium-webdriver';
 import { startDriver } from '../adapters/webScrapper';
-import {
-  defaultBuyButtonCSS,
-  defaultEventURL,
-  defaultNumberOfQueues,
-  defaultQueueURL,
-  defaultMultipleQueueingOptions,
-  defaultUseQueueURL,
-} from '../constants';
+import { BUY_BUTTON_CSS, EVENT_URL, NUMBER_OF_QUEUES, QUEUE_URL, QUEUEING_OPTIONS, USE_QUEUE_URL } from '../constants';
 
 interface EnterQueueOptions {
   eventURL: string;
@@ -31,13 +24,13 @@ interface MultipleQueueingOptions extends Partial<EnterQueueOptions> {
   numberOfQueues?: number;
 }
 
-export const multipleQueueing = (options: MultipleQueueingOptions = defaultMultipleQueueingOptions) => {
+export const multipleQueueing = (options: MultipleQueueingOptions = QUEUEING_OPTIONS) => {
   const {
-    numberOfQueues = defaultNumberOfQueues,
-    eventURL = defaultEventURL,
-    buyButtonCSS = defaultBuyButtonCSS,
-    queueURL = defaultQueueURL,
-    useQueueURL = defaultUseQueueURL,
+    numberOfQueues = NUMBER_OF_QUEUES,
+    eventURL = EVENT_URL,
+    buyButtonCSS = BUY_BUTTON_CSS,
+    queueURL = QUEUE_URL,
+    useQueueURL = USE_QUEUE_URL,
   } = options;
 
   const range = [...Array(numberOfQueues).keys()];
