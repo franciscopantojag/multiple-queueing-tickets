@@ -5,7 +5,7 @@ import { BUY_BUTTON_CSS, EVENT_URL, NUMBER_OF_QUEUES, QUEUE_URL, QUEUEING_OPTION
 interface EnterQueueOptions {
   eventURL: string;
   buyButtonCSS: string;
-  queueURL?: string;
+  queueURL?: string | null;
   useQueueURL?: boolean;
 }
 
