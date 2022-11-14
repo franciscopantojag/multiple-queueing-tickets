@@ -4,7 +4,4 @@ import chromedriver from 'chromedriver';
 
 chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
 
-export const startDriver = async () => {
-  const driver = await new Builder().forBrowser('chrome').build();
-  return driver;
-};
+export const startDriver = () => new Builder().forBrowser('chrome').build();

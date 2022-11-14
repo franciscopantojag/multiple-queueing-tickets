@@ -10,7 +10,7 @@ interface EnterQueueOptions {
 }
 
 const enterQueue = async ({ eventURL, buyButtonCSS, queueURL, useQueueURL }: EnterQueueOptions) => {
-  const driver = await startDriver();
+  const driver = startDriver();
   if (queueURL && useQueueURL) {
     await driver.get(queueURL);
     return driver.navigate().refresh();
