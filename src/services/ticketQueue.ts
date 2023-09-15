@@ -1,5 +1,5 @@
 import { By } from 'selenium-webdriver';
-import { startDriver } from '../adapters/webScrapper';
+import { getDriver } from '../adapters/webScrapper';
 import { BUY_BUTTON_CSS, EVENT_URL, NUMBER_OF_QUEUES, QUEUE_URL, QUEUEING_OPTIONS, USE_QUEUE_URL } from '../constants';
 
 interface EnterQueueOptions {
@@ -10,7 +10,7 @@ interface EnterQueueOptions {
 }
 
 const enterQueue = async ({ eventURL, buyButtonCSS, queueURL, useQueueURL }: EnterQueueOptions) => {
-  const driver = startDriver();
+  const driver = getDriver();
   if (queueURL && useQueueURL) {
     await driver.get(queueURL);
     return driver.navigate().refresh();

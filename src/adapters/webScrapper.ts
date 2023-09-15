@@ -1,7 +1,7 @@
-import { Builder } from 'selenium-webdriver';
-import chrome from 'selenium-webdriver/chrome';
+import { ServiceBuilder, Options, Driver } from 'selenium-webdriver/chrome';
 import chromedriver from 'chromedriver';
 
-chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
+const service = new ServiceBuilder(chromedriver.path).enableVerboseLogging().build();
+const options = new Options();
 
-export const startDriver = () => new Builder().forBrowser('chrome').build();
+export const getDriver = () => Driver.createSession(options, service);

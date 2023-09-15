@@ -1,5 +1,4 @@
 import { multipleQueueing } from './services/ticketQueue';
 
-(() => {
-  multipleQueueing();
-})();
+const main = () => multipleQueueing();
+main();
