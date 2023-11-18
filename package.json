@@ -30,7 +30,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "chromedriver": "^117.0.3",
+    "chromedriver": "^119.0.1",
     "selenium-webdriver": "^4.12.0"
   }
 }
