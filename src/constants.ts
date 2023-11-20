@@ -1,6 +1,6 @@
-export const NUMBER_OF_QUEUES = 50;
+export const NUMBER_OF_QUEUES = 20;
 export const EVENT_URL = 'https://teleticket.com.pe/mana-2024';
-export const BUY_BUTTON_XPATH = '//*[@id="choose-tickets-section text-center"]/div[1]/div/a[1]';
+export const BUY_BUTTON_XPATH = '//*[@id="choose-tickets-section text-center"]/div[1]/div/a[2]';
 export const QUEUE_URL = null;
 export const USE_QUEUE_URL = false;
 
