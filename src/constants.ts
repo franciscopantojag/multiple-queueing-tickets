@@ -1,8 +1,10 @@
-export const NUMBER_OF_QUEUES = 20;
-export const EVENT_URL = 'https://teleticket.com.pe/mana-2024';
-export const BUY_BUTTON_XPATH = '//*[@id="choose-tickets-section text-center"]/div[1]/div/a[2]';
-export const QUEUE_URL = null;
-export const USE_QUEUE_URL = false;
+export const NUMBER_OF_QUEUES = 50;
+export const EVENT_URL = 'https://www.ticketmaster.pe/event/bad-bunny-debi-tirar-mas-fotos-world-tour-2026';
+export const BUY_BUTTON_XPATH =
+  '//*[@id="component-4319d70d-5e30-42c1-bcb2-7ff602f44d76"]/div/div/div/div/div/div/div/div/div[3]/a';
+export const QUEUE_URL =
+  'https://www.ticketmaster.pe/event/bad-bunny-debi-tirar-mas-fotos-world-tour-2026-venta-bbva-563902';
+export const USE_QUEUE_URL = true;
 
 export const QUEUEING_OPTIONS = {
   numberOfQueues: NUMBER_OF_QUEUES,
